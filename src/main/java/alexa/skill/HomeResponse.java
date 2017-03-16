@@ -1,4 +1,4 @@
-package helloworld;
+package alexa.skill;
 
 import java.util.Random;
 
@@ -9,8 +9,13 @@ import com.amazon.speech.ui.SimpleCard;
 
 public class HomeResponse {
 	
+	SmartHome smartHome = new SmartHome();
+	
 	public SpeechletResponse getLightIntensityResponse() {
     	
+		//TODO
+		smartHome.getLightIntensity();
+		
     	String speechText = "Your room light intensity is ";
     	Random random = new Random();
     	int lightIntensity = random.nextInt(100);
@@ -31,6 +36,8 @@ public class HomeResponse {
     
 	public SpeechletResponse getColorLightResponse(String state) {
     	
+		smartHome.setDeviceState("colorlight", state);
+		
     	String speechText = "Your color light is " + state;
 
         // Create the Simple card content.
@@ -48,6 +55,8 @@ public class HomeResponse {
     
 	public SpeechletResponse getKettleResponse(String state) {
     	
+		smartHome.setDeviceState("kettle", state);
+		
     	String speechText = "Your kettle is " + state;
 
         // Create the Simple card content.
