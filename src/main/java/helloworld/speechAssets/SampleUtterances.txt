@@ -27,6 +27,5 @@ TurnKettleOnIntent kettle on
 TurnOffKettleIntent turn off kettle
 TurnOffKettleIntent kettle off
 
-mvn assembly:assembly -DdescriptorId=jar-with-dependencies package
 
 
