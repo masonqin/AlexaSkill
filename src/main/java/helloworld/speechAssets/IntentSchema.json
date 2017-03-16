@@ -1,0 +1,26 @@
+{
+  "intents": [
+    {
+      "intent": "HelloEmmaIntent"
+    },
+    {
+      "intent": "LightIntensityIntent"
+    },
+    {
+      "intent": "TurnOnColorLightIntent"
+    },
+    {
+      "intent": "TurnOffColorLightIntent"
+    },
+    {
+      "intent": "TurnKettleOnIntent"
+    },
+    {
+      "intent": "TurnOffKettleIntent"
+    },
+	
+    {
+      "intent": "AMAZON.HelpIntent"
+    }
+  ]
+}

@@ -1,0 +1,32 @@
+HelloEmmaIntent say hello
+HelloEmmaIntent say hello emma
+HelloEmmaIntent hello
+HelloEmmaIntent say hi
+HelloEmmaIntent say hi emma
+HelloEmmaIntent hi
+HelloEmmaIntent how are you
+
+
+LightIntensityIntent get light intensity 
+LightIntensityIntent light intensity
+LightIntensityIntent my light intensity
+
+
+TurnOnColorLightIntent turn on color light
+TurnOnColorLightIntent color light on 
+
+
+TurnOffColorLightIntent turn off color light
+TurnOffColorLightIntent color light off
+
+
+TurnKettleOnIntent turn on kettle
+TurnKettleOnIntent kettle on 
+
+
+TurnOffKettleIntent turn off kettle
+TurnOffKettleIntent kettle off
+
+mvn assembly:assembly -DdescriptorId=jar-with-dependencies package
+
+
