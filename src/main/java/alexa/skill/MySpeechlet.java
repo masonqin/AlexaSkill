@@ -7,7 +7,7 @@
 
     or in the "license" file accompanying this file. This file is distributed on an "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied. See the License for the specific language governing permissions and limitations under the License.
  */
-package helloworld;
+package alexa.skill;
 
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -28,8 +28,8 @@ import com.amazon.speech.ui.SimpleCard;
 /**
  * This sample shows how to create a simple speechlet for handling speechlet requests.
  */
-public class HelloWorldSpeechlet implements Speechlet {
-    private static final Logger log = LoggerFactory.getLogger(HelloWorldSpeechlet.class);
+public class MySpeechlet implements Speechlet {
+    private static final Logger log = LoggerFactory.getLogger(MySpeechlet.class);
     private HomeResponse homeresponse = new HomeResponse();
     @Override
     public void onSessionStarted(final SessionStartedRequest request, final Session session)
@@ -57,7 +57,7 @@ public class HelloWorldSpeechlet implements Speechlet {
         String intentName = (intent != null) ? intent.getName() : null;
 
         if ("HelloEmmaIntent".equals(intentName)) {
-            return getHelloResponse();
+        	return getHelloResponse();
         } else if("LightIntensityIntent".equals(intentName)){
         	return homeresponse.getLightIntensityResponse();
     	} else if("TurnOnColorLightIntent".equals(intentName)){
@@ -69,9 +69,9 @@ public class HelloWorldSpeechlet implements Speechlet {
         } else if("TurnOffKettleIntent".equals(intentName)){
         	return homeresponse.getKettleResponse("off");
         } else if ("AMAZON.HelpIntent".equals(intentName)) {
-            return getHelpResponse();
+        	return getHelpResponse();
         } else {
-            throw new SpeechletException("Invalid Intent");
+        	throw new SpeechletException("Invalid Intent");
         }
     }
 

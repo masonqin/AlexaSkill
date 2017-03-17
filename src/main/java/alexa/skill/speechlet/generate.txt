@@ -1,0 +1,12 @@
+mvn assembly:assembly -DdescriptorId=jar-with-dependencies package
+
+Lambda handler
+alexa.skill.MySpeechletHandler
+
+alexa test skill name
+smart home
+
+alexa skill name
+tiny emma
+
+
